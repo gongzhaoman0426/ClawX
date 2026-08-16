@@ -1,0 +1,86 @@
+{
+  "title": "MCP",
+  "subtitle": "添加和管理 Model Context Protocol 服务器",
+  "gatewayWarning": "网关未运行。配置仍可保存，但 MCP 工具要等网关启动后才会生效。",
+  "search": "搜索 MCP...",
+  "filter": {
+    "enabledList": "已开启 ({{count}})",
+    "disabledList": "已禁用 ({{count}})"
+  },
+  "actions": {
+    "add": "添加 MCP"
+  },
+  "empty": {
+    "title": "还没有 MCP 服务器",
+    "description": "选择一种传输方式，把本地进程或远程服务接到 Agent。",
+    "search": "没有匹配的 MCP 服务器"
+  },
+  "transport": {
+    "stdio": "stdio",
+    "sse": "SSE",
+    "streamable-http": "Streamable HTTP",
+    "stdioTitle": "本地进程",
+    "stdioDescription": "通过命令行启动本地 MCP，用标准输入输出通信。",
+    "sseTitle": "SSE",
+    "sseDescription": "连接远程 HTTP 服务器，使用 Server-Sent Events。",
+    "httpTitle": "Streamable HTTP",
+    "httpDescription": "连接远程 HTTP 服务器，使用双向流式传输。"
+  },
+  "form": {
+    "addTitle": "添加 MCP",
+    "editTitle": "编辑 MCP",
+    "addSubtitle": "选择传输类型并填写连接信息",
+    "editSubtitle": "更新已保存的 MCP 服务器定义",
+    "typeLabel": "传输类型",
+    "name": "名称",
+    "namePlaceholder": "例如 memory 或 docs",
+    "command": "启动命令",
+    "commandPlaceholder": "npx",
+    "args": "参数",
+    "argsPlaceholder": "每行一个参数，例如 -y",
+    "cwd": "工作目录",
+    "cwdPlaceholder": "可选，例如 /Users/you/project",
+    "browse": "浏览",
+    "env": "环境变量",
+    "envPlaceholder": "每行一个 KEY=value",
+    "url": "服务器 URL",
+    "urlPlaceholder": "https://mcp.example.com/mcp",
+    "headers": "请求头",
+    "headersPlaceholder": "每行一个 Header: value 或 KEY=value",
+    "enabled": "启用",
+    "save": "保存",
+    "cancel": "取消",
+    "saving": "保存中..."
+  },
+  "detail": {
+    "enabled": "已启用",
+    "disabled": "已禁用",
+    "command": "命令",
+    "args": "参数",
+    "cwd": "工作目录",
+    "env": "环境变量",
+    "url": "URL",
+    "headers": "请求头",
+    "edit": "编辑",
+    "delete": "删除",
+    "none": "无"
+  },
+  "confirmDelete": {
+    "title": "删除 MCP 服务器",
+    "message": "确定删除「{{name}}」？此操作不会卸载远程服务，只会从 OpenClaw 配置中移除。",
+    "confirm": "删除",
+    "cancel": "取消"
+  },
+  "toast": {
+    "added": "已添加 MCP 服务器",
+    "updated": "已更新 MCP 服务器",
+    "removed": "已删除 MCP 服务器",
+    "toggledOn": "已启用 {{name}}",
+    "toggledOff": "已禁用 {{name}}",
+    "failedAdd": "添加失败",
+    "failedUpdate": "更新失败",
+    "failedRemove": "删除失败",
+    "failedToggle": "切换失败",
+    "failedLoad": "加载 MCP 服务器失败"
+  }
+}

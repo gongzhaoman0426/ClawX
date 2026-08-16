@@ -1,0 +1,86 @@
+{
+  "title": "MCP",
+  "subtitle": "Добавление и управление серверами Model Context Protocol",
+  "gatewayWarning": "Шлюз не запущен. Конфигурацию можно сохранить, но инструменты появятся после запуска.",
+  "search": "Поиск MCP...",
+  "filter": {
+    "enabledList": "Включено ({{count}})",
+    "disabledList": "Отключено ({{count}})"
+  },
+  "actions": {
+    "add": "Добавить MCP"
+  },
+  "empty": {
+    "title": "Серверов MCP пока нет",
+    "description": "Выберите транспорт, чтобы подключить локальный процесс или удалённый сервис.",
+    "search": "Нет подходящих серверов MCP"
+  },
+  "transport": {
+    "stdio": "stdio",
+    "sse": "SSE",
+    "streamable-http": "Streamable HTTP",
+    "stdioTitle": "Локальный процесс",
+    "stdioDescription": "Запуск локального MCP через стандартный ввод-вывод.",
+    "sseTitle": "SSE",
+    "sseDescription": "Подключение к удалённому HTTP-серверу через Server-Sent Events.",
+    "httpTitle": "Streamable HTTP",
+    "httpDescription": "Подключение к удалённому HTTP-серверу через двусторонний поток."
+  },
+  "form": {
+    "addTitle": "Добавить MCP",
+    "editTitle": "Изменить MCP",
+    "addSubtitle": "Выберите транспорт и укажите параметры подключения",
+    "editSubtitle": "Обновите сохранённое определение сервера MCP",
+    "typeLabel": "Транспорт",
+    "name": "Имя",
+    "namePlaceholder": "например memory или docs",
+    "command": "Команда",
+    "commandPlaceholder": "npx",
+    "args": "Аргументы",
+    "argsPlaceholder": "По одному аргументу в строке, например -y",
+    "cwd": "Рабочая папка",
+    "cwdPlaceholder": "Необязательно, например /Users/you/project",
+    "browse": "Обзор",
+    "env": "Переменные среды",
+    "envPlaceholder": "По одному KEY=value в строке",
+    "url": "URL сервера",
+    "urlPlaceholder": "https://mcp.example.com/mcp",
+    "headers": "Заголовки",
+    "headersPlaceholder": "По одному Header: value или KEY=value в строке",
+    "enabled": "Включено",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "saving": "Сохранение..."
+  },
+  "detail": {
+    "enabled": "Включено",
+    "disabled": "Отключено",
+    "command": "Команда",
+    "args": "Аргументы",
+    "cwd": "Рабочая папка",
+    "env": "Переменные среды",
+    "url": "URL",
+    "headers": "Заголовки",
+    "edit": "Изменить",
+    "delete": "Удалить",
+    "none": "Нет"
+  },
+  "confirmDelete": {
+    "title": "Удалить сервер MCP",
+    "message": "Удалить «{{name}}»? Сервер будет убран только из конфигурации OpenClaw.",
+    "confirm": "Удалить",
+    "cancel": "Отмена"
+  },
+  "toast": {
+    "added": "Сервер MCP добавлен",
+    "updated": "Сервер MCP обновлён",
+    "removed": "Сервер MCP удалён",
+    "toggledOn": "{{name}} включён",
+    "toggledOff": "{{name}} отключён",
+    "failedAdd": "Не удалось добавить",
+    "failedUpdate": "Не удалось обновить",
+    "failedRemove": "Не удалось удалить",
+    "failedToggle": "Не удалось переключить",
+    "failedLoad": "Не удалось загрузить серверы MCP"
+  }
+}

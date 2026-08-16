@@ -10,6 +10,7 @@ import {
   Network,
   Bot,
   Puzzle,
+  Cable,
   Clock,
   Settings as SettingsIcon,
   PanelLeftClose,
@@ -432,6 +433,12 @@ export function Sidebar() {
       icon: <Puzzle className="h-4 w-4" strokeWidth={2} />,
       label: t('sidebar.skills'),
       testId: 'sidebar-nav-skills',
+    },
+    {
+      to: '/mcp',
+      icon: <Cable className="h-4 w-4" strokeWidth={2} />,
+      label: t('sidebar.mcp'),
+      testId: 'sidebar-nav-mcp',
     },
     {
       to: '/cron',

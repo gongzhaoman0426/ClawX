@@ -63,6 +63,7 @@ import { createMediaApi } from '../services/media-api';
 import { createProvidersApi } from '../services/providers-api';
 import { createSessionsApi } from '../services/sessions-api';
 import { createSkillsApi } from '../services/skills-api';
+import { createMcpApi } from '../services/mcp-api';
 import { createUsageApi } from '../services/usage-api';
 import { createWebBrowserApi } from '../services/web-browser-api';
 import type { WebBrowserGuestRegistry } from './web-browser-policy';
@@ -177,6 +178,7 @@ function registerTypedHostHandlers(
     chat: createChatApi({ gatewayManager, mainWindow, acpSessionAccessRegistry }),
     cron: createCronApi({ gatewayManager }),
     skills: createSkillsApi({ clawHubService, gatewayManager }),
+    mcp: createMcpApi(),
     usage: createUsageApi(),
   });
   registerHostInvokeHandler(hostApiRegistry);

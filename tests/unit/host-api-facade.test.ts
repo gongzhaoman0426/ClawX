@@ -517,6 +517,17 @@ describe('hostApi facade', () => {
     }));
   });
 
+  it('calls mcp.list through hostInvoke', async () => {
+    hostInvoke.mockResolvedValueOnce({ id: 'req', ok: true, data: { success: true, servers: [] } });
+    const { hostApi } = await import('@/lib/host-api');
+
+    await hostApi.mcp.list();
+    expect(hostInvoke).toHaveBeenCalledWith(expect.objectContaining({
+      module: 'mcp',
+      action: 'list',
+    }));
+  });
+
   it('calls usage.recentTokenHistory through hostInvoke', async () => {
     hostInvoke.mockResolvedValueOnce({ id: 'req', ok: true, data: [] });
     const { hostApi } = await import('@/lib/host-api');

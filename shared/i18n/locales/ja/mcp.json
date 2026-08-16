@@ -1,0 +1,86 @@
+{
+  "title": "MCP",
+  "subtitle": "Model Context Protocol サーバーを追加・管理",
+  "gatewayWarning": "ゲートウェイが停止しています。設定は保存できますが、起動後にツールが有効になります。",
+  "search": "MCP を検索...",
+  "filter": {
+    "enabledList": "有効 ({{count}})",
+    "disabledList": "無効 ({{count}})"
+  },
+  "actions": {
+    "add": "MCP を追加"
+  },
+  "empty": {
+    "title": "MCP サーバーはまだありません",
+    "description": "転送方式を選んで、ローカルプロセスまたはリモートサービスを接続します。",
+    "search": "一致する MCP サーバーがありません"
+  },
+  "transport": {
+    "stdio": "stdio",
+    "sse": "SSE",
+    "streamable-http": "Streamable HTTP",
+    "stdioTitle": "ローカルプロセス",
+    "stdioDescription": "コマンドでローカル MCP を起動し、標準入出力で通信します。",
+    "sseTitle": "SSE",
+    "sseDescription": "Server-Sent Events でリモート HTTP サーバーに接続します。",
+    "httpTitle": "Streamable HTTP",
+    "httpDescription": "双方向ストリーミングでリモート HTTP サーバーに接続します。"
+  },
+  "form": {
+    "addTitle": "MCP を追加",
+    "editTitle": "MCP を編集",
+    "addSubtitle": "転送方式を選び、接続情報を入力します",
+    "editSubtitle": "保存済みの MCP サーバー定義を更新します",
+    "typeLabel": "転送方式",
+    "name": "名前",
+    "namePlaceholder": "例: memory または docs",
+    "command": "コマンド",
+    "commandPlaceholder": "npx",
+    "args": "引数",
+    "argsPlaceholder": "1行に1つの引数。例: -y",
+    "cwd": "作業ディレクトリ",
+    "cwdPlaceholder": "任意。例: /Users/you/project",
+    "browse": "参照",
+    "env": "環境変数",
+    "envPlaceholder": "1行に1つの KEY=value",
+    "url": "サーバー URL",
+    "urlPlaceholder": "https://mcp.example.com/mcp",
+    "headers": "ヘッダー",
+    "headersPlaceholder": "1行に1つの Header: value または KEY=value",
+    "enabled": "有効",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "saving": "保存中..."
+  },
+  "detail": {
+    "enabled": "有効",
+    "disabled": "無効",
+    "command": "コマンド",
+    "args": "引数",
+    "cwd": "作業ディレクトリ",
+    "env": "環境変数",
+    "url": "URL",
+    "headers": "ヘッダー",
+    "edit": "編集",
+    "delete": "削除",
+    "none": "なし"
+  },
+  "confirmDelete": {
+    "title": "MCP サーバーを削除",
+    "message": "「{{name}}」を削除しますか？OpenClaw 設定からのみ削除されます。",
+    "confirm": "削除",
+    "cancel": "キャンセル"
+  },
+  "toast": {
+    "added": "MCP サーバーを追加しました",
+    "updated": "MCP サーバーを更新しました",
+    "removed": "MCP サーバーを削除しました",
+    "toggledOn": "{{name}} を有効にしました",
+    "toggledOff": "{{name}} を無効にしました",
+    "failedAdd": "追加に失敗しました",
+    "failedUpdate": "更新に失敗しました",
+    "failedRemove": "削除に失敗しました",
+    "failedToggle": "切り替えに失敗しました",
+    "failedLoad": "MCP サーバーの読み込みに失敗しました"
+  }
+}

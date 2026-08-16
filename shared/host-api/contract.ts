@@ -9,6 +9,7 @@ import type { RawMessage } from '../chat/types';
 import type { AgentsSnapshot } from '../types/agent';
 import type { CronJob, CronJobCreateInput, CronJobUpdateInput } from '../types/cron';
 import type { GatewayHealth, GatewayStatus } from '../types/gateway';
+import type { McpServer, McpServerInput } from '../types/mcp';
 import type { MarketplaceSkill, QuickAccessSkill, Skill } from '../types/skill';
 import type { WebBrowserNavigatePayload } from '../web-browser';
 
@@ -795,6 +796,12 @@ export type UsageHistoryEntry = {
 };
 export type UsageHistoryPayload = { limit?: number };
 
+export type McpListResult = HostSuccess & { servers: McpServer[] };
+export type McpMutationResult = HostSuccess & { servers?: McpServer[] };
+export type McpNamePayload = { name: string };
+export type McpTogglePayload = McpNamePayload & { enabled: boolean };
+export type McpUpsertPayload = { server: McpServerInput; originalName?: string };
+
 export type DeliveryChannelAccount = {
   accountId: string;
   name: string;
@@ -1009,6 +1016,13 @@ export type HostApiContract = {
     clawhubUninstall: (payload: ClawHubUninstallPayload) => HostSuccess;
     clawhubOpenSkillReadme: (payload: ClawHubOpenPayload) => HostSuccess;
     clawhubOpenSkillPath: (payload: ClawHubOpenPayload) => HostSuccess;
+  };
+  mcp: {
+    list: () => McpListResult;
+    add: (payload: McpUpsertPayload) => McpMutationResult;
+    update: (payload: McpUpsertPayload) => McpMutationResult;
+    toggle: (payload: McpTogglePayload) => McpMutationResult;
+    remove: (payload: McpNamePayload) => McpMutationResult;
   };
   usage: {
     recentTokenHistory: (payload?: UsageHistoryPayload) => UsageHistoryEntry[];

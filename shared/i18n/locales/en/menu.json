@@ -40,6 +40,7 @@
     "chat": "Chat",
     "channels": "Channels",
     "skills": "Skills",
+    "mcp": "MCP",
     "cronTasks": "Cron Tasks",
     "settings": "Settings"
   },

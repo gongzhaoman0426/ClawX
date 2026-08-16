@@ -1,0 +1,86 @@
+{
+  "title": "MCP",
+  "subtitle": "Add and manage Model Context Protocol servers",
+  "gatewayWarning": "Gateway is not running. You can still save MCP servers, but tools will not be live until it starts.",
+  "search": "Search MCP...",
+  "filter": {
+    "enabledList": "Enabled ({{count}})",
+    "disabledList": "Disabled ({{count}})"
+  },
+  "actions": {
+    "add": "Add MCP"
+  },
+  "empty": {
+    "title": "No MCP servers yet",
+    "description": "Pick a transport to connect a local process or remote service to the agent.",
+    "search": "No matching MCP servers"
+  },
+  "transport": {
+    "stdio": "stdio",
+    "sse": "SSE",
+    "streamable-http": "Streamable HTTP",
+    "stdioTitle": "Local process",
+    "stdioDescription": "Launch a local MCP server over stdin/stdout.",
+    "sseTitle": "SSE",
+    "sseDescription": "Connect to a remote HTTP server using Server-Sent Events.",
+    "httpTitle": "Streamable HTTP",
+    "httpDescription": "Connect to a remote HTTP server using bidirectional streaming."
+  },
+  "form": {
+    "addTitle": "Add MCP",
+    "editTitle": "Edit MCP",
+    "addSubtitle": "Choose a transport and fill in the connection details",
+    "editSubtitle": "Update this saved MCP server definition",
+    "typeLabel": "Transport",
+    "name": "Name",
+    "namePlaceholder": "e.g. memory or docs",
+    "command": "Command",
+    "commandPlaceholder": "npx",
+    "args": "Arguments",
+    "argsPlaceholder": "One argument per line, e.g. -y",
+    "cwd": "Working directory",
+    "cwdPlaceholder": "Optional, e.g. /Users/you/project",
+    "browse": "Browse",
+    "env": "Environment",
+    "envPlaceholder": "One KEY=value per line",
+    "url": "Server URL",
+    "urlPlaceholder": "https://mcp.example.com/mcp",
+    "headers": "Headers",
+    "headersPlaceholder": "One Header: value or KEY=value per line",
+    "enabled": "Enabled",
+    "save": "Save",
+    "cancel": "Cancel",
+    "saving": "Saving..."
+  },
+  "detail": {
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "command": "Command",
+    "args": "Arguments",
+    "cwd": "Working directory",
+    "env": "Environment",
+    "url": "URL",
+    "headers": "Headers",
+    "edit": "Edit",
+    "delete": "Delete",
+    "none": "None"
+  },
+  "confirmDelete": {
+    "title": "Delete MCP server",
+    "message": "Delete \"{{name}}\"? This only removes it from OpenClaw config.",
+    "confirm": "Delete",
+    "cancel": "Cancel"
+  },
+  "toast": {
+    "added": "MCP server added",
+    "updated": "MCP server updated",
+    "removed": "MCP server removed",
+    "toggledOn": "Enabled {{name}}",
+    "toggledOff": "Disabled {{name}}",
+    "failedAdd": "Failed to add",
+    "failedUpdate": "Failed to update",
+    "failedRemove": "Failed to remove",
+    "failedToggle": "Failed to toggle",
+    "failedLoad": "Failed to load MCP servers"
+  }
+}

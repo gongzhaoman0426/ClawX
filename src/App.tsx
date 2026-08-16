@@ -14,6 +14,7 @@ import { Chat } from './pages/Chat';
 import { Agents } from './pages/Agents';
 import { Channels } from './pages/Channels';
 import { Skills } from './pages/Skills';
+import { Mcp } from './pages/Mcp';
 import { Cron } from './pages/Cron';
 import { ImageGenerationPage } from './pages/ImageGeneration';
 import { Settings } from './pages/Settings';
@@ -208,6 +209,7 @@ function App() {
             <Route path="/agents" element={<Agents />} />
             <Route path="/channels" element={<Channels />} />
             <Route path="/skills" element={<Skills />} />
+            <Route path="/mcp" element={<Mcp />} />
             <Route path="/cron" element={<Cron />} />
             <Route path="/image-generation" element={devModeUnlocked ? <ImageGenerationPage /> : <Navigate to="/" replace />} />
             <Route path="/settings/*" element={<Settings />} />

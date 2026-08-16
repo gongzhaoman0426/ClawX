@@ -14,6 +14,7 @@ import type {
   FilePreviewTreeOptions,
   FileReadBinaryOptions,
   ImageGenerationSettingsPayload,
+  McpUpsertPayload,
   MediaThumbnailEntry,
   OpenClawDoctorMode,
   OpenClawDoctorResult,
@@ -47,6 +48,7 @@ import type {
   AcpChatRespondPermissionPayload,
 } from '@shared/acp-chat/types';
 import type { CronJobCreateInput, CronJobUpdateInput } from '@shared/types/cron';
+import type { McpServerInput } from '@shared/types/mcp';
 import { invokeHost } from './host-api-client';
 
 export type {
@@ -401,6 +403,15 @@ export const hostApi = {
     clawhubOpenSkillPath: (input: { skillKey?: string; slug?: string; baseDir?: string }) => (
       invokeHost('skills', 'clawhubOpenSkillPath', input)
     ),
+  },
+  mcp: {
+    list: () => invokeHost('mcp', 'list'),
+    add: (server: McpServerInput) => invokeHost('mcp', 'add', { server } satisfies McpUpsertPayload),
+    update: (server: McpServerInput, originalName?: string) => (
+      invokeHost('mcp', 'update', { server, originalName } satisfies McpUpsertPayload)
+    ),
+    toggle: (name: string, enabled: boolean) => invokeHost('mcp', 'toggle', { name, enabled }),
+    remove: (name: string) => invokeHost('mcp', 'remove', { name }),
   },
   usage: {
     recentTokenHistory: (limit?: number) => (

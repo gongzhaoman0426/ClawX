@@ -8,6 +8,7 @@ import enChat from './locales/en/chat.json';
 import enChannels from './locales/en/channels.json';
 import enAgents from './locales/en/agents.json';
 import enSkills from './locales/en/skills.json';
+import enMcp from './locales/en/mcp.json';
 import enCron from './locales/en/cron.json';
 import enSetup from './locales/en/setup.json';
 import enMenu from './locales/en/menu.json';
@@ -20,6 +21,7 @@ import zhChat from './locales/zh/chat.json';
 import zhChannels from './locales/zh/channels.json';
 import zhAgents from './locales/zh/agents.json';
 import zhSkills from './locales/zh/skills.json';
+import zhMcp from './locales/zh/mcp.json';
 import zhCron from './locales/zh/cron.json';
 import zhSetup from './locales/zh/setup.json';
 import zhMenu from './locales/zh/menu.json';
@@ -32,6 +34,7 @@ import jaChat from './locales/ja/chat.json';
 import jaChannels from './locales/ja/channels.json';
 import jaAgents from './locales/ja/agents.json';
 import jaSkills from './locales/ja/skills.json';
+import jaMcp from './locales/ja/mcp.json';
 import jaCron from './locales/ja/cron.json';
 import jaSetup from './locales/ja/setup.json';
 import jaMenu from './locales/ja/menu.json';
@@ -44,6 +47,7 @@ import ruChat from './locales/ru/chat.json';
 import ruChannels from './locales/ru/channels.json';
 import ruAgents from './locales/ru/agents.json';
 import ruSkills from './locales/ru/skills.json';
+import ruMcp from './locales/ru/mcp.json';
 import ruCron from './locales/ru/cron.json';
 import ruSetup from './locales/ru/setup.json';
 import ruMenu from './locales/ru/menu.json';
@@ -56,6 +60,7 @@ export const I18N_NAMESPACES = [
   'channels',
   'agents',
   'skills',
+  'mcp',
   'cron',
   'setup',
   'menu',
@@ -70,6 +75,7 @@ export const I18N_RESOURCES = {
     channels: enChannels,
     agents: enAgents,
     skills: enSkills,
+    mcp: enMcp,
     cron: enCron,
     setup: enSetup,
     menu: enMenu,
@@ -82,6 +88,7 @@ export const I18N_RESOURCES = {
     channels: zhChannels,
     agents: zhAgents,
     skills: zhSkills,
+    mcp: zhMcp,
     cron: zhCron,
     setup: zhSetup,
     menu: zhMenu,
@@ -94,6 +101,7 @@ export const I18N_RESOURCES = {
     channels: jaChannels,
     agents: jaAgents,
     skills: jaSkills,
+    mcp: jaMcp,
     cron: jaCron,
     setup: jaSetup,
     menu: jaMenu,
@@ -106,6 +114,7 @@ export const I18N_RESOURCES = {
     channels: ruChannels,
     agents: ruAgents,
     skills: ruSkills,
+    mcp: ruMcp,
     cron: ruCron,
     setup: ruSetup,
     menu: ruMenu,

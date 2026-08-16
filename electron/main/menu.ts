@@ -158,8 +158,16 @@ export async function createMenu(language?: string): Promise<void> {
           },
         },
         {
-          label: labels.navigate.cronTasks,
+          label: labels.navigate.mcp,
           accelerator: 'CmdOrCtrl+5',
+          click: () => {
+            const win = getMenuTargetWindow();
+            win?.webContents.send('navigate', '/mcp');
+          },
+        },
+        {
+          label: labels.navigate.cronTasks,
+          accelerator: 'CmdOrCtrl+6',
           click: () => {
             const win = getMenuTargetWindow();
             win?.webContents.send('navigate', '/cron');
